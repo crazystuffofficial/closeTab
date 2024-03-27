@@ -5,12 +5,13 @@
   <body>
     <button onclick="closeTab();">Click me to close the tab!</button>
     <script>
+      if(location.hash == "#close"){
+        location.href = "https://crazystuffofficial.github.io/closeTab/";
+      }
       function closeTab(){
-        if(location.hash != "close"){
+        if(location.hash != "#close"){
           location.hash = "close";
           window.location.reload();
-        } else{
-          location.href = "https://crazystuffofficial.github.io/closeTab/";
         }
       }
     </script>
