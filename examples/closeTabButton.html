@@ -6,7 +6,12 @@
     <button onclick="closeTab();">Click me to close the tab!</button>
     <script>
       function closeTab(){
-        location.href = "https://crazystuffofficial.github.io/closeTab/";
+        if(location.hash != "close"){
+          location.hash = "close";
+          window.location.reload();
+        } else{
+          location.href = "https://crazystuffofficial.github.io/closeTab/";
+        }
       }
     </script>
   </body>
